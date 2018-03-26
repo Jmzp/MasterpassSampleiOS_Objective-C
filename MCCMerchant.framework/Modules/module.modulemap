@@ -1,0 +1,6 @@
+framework module MCCMerchant {
+  umbrella header "MCCMerchant.h"
+
+  export *
+  module * { export * }
+}

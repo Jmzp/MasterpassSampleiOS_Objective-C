@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import <MCCMerchant/MCCMerchant.h>
+#import "ViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -15,9 +18,16 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+/*- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
+}*/
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *) url{
+    
+    BOOL returnTemp = [MCCMerchant handleMasterpassResponse:(url.absoluteString) delegate:([[ViewController alloc] init])];
+    
+    return returnTemp;
 }
 
 

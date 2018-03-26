@@ -13,7 +13,23 @@
 		47835C7820658B5A00F4B73F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47835C7720658B5A00F4B73F /* Assets.xcassets */; };
 		47835C7B20658B5A00F4B73F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47835C7920658B5A00F4B73F /* LaunchScreen.storyboard */; };
 		47835C7E20658B5A00F4B73F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47835C7D20658B5A00F4B73F /* main.m */; };
+		47835C8520658BE200F4B73F /* MCCMerchant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47835C8420658BE200F4B73F /* MCCMerchant.framework */; };
+		47835C8620658BE200F4B73F /* MCCMerchant.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47835C8420658BE200F4B73F /* MCCMerchant.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		47835C8720658BE200F4B73F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				47835C8620658BE200F4B73F /* MCCMerchant.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		47835C6B20658B5A00F4B73F /* TestMerchantAppObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMerchantAppObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +42,7 @@
 		47835C7A20658B5A00F4B73F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47835C7C20658B5A00F4B73F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47835C7D20658B5A00F4B73F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47835C8420658BE200F4B73F /* MCCMerchant.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MCCMerchant.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47835C8520658BE200F4B73F /* MCCMerchant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 		47835C6220658B5900F4B73F = {
 			isa = PBXGroup;
 			children = (
+				47835C8420658BE200F4B73F /* MCCMerchant.framework */,
 				47835C6D20658B5A00F4B73F /* TestMerchantAppObjc */,
 				47835C6C20658B5A00F4B73F /* Products */,
 			);
@@ -81,6 +100,7 @@
 				47835C6720658B5A00F4B73F /* Sources */,
 				47835C6820658B5A00F4B73F /* Frameworks */,
 				47835C6920658B5A00F4B73F /* Resources */,
+				47835C8720658BE200F4B73F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +300,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5T3727QAWW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestMerchantAppObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TestMerchantAppObjc;
@@ -294,6 +318,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5T3727QAWW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestMerchantAppObjc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TestMerchantAppObjc;
