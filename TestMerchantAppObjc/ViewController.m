@@ -87,10 +87,8 @@ NSString * const TAG = @"ViewController";
     MCCCheckoutRequest * transactionRequest = [[MCCCheckoutRequest alloc] init];
     
     //check merchant on-boarding process for checkoutId & cartID
-    //transactionRequest.checkoutId = "c71d7dddda6a4db3af6121346de08ad9"
-    transactionRequest.checkoutId = @"2a68b52293f84f14bb9750e0b3515c13";
-    //transactionRequest.checkoutId = "e2e39e91903a4e1d9743491448c79c11"
-    transactionRequest.cartId = @"b9410f9-e5a7-4f14-9c99-ea557d6fe2e8";
+    transactionRequest.checkoutId = @"{ADD_YOUR_CHECKOUTID}";
+    transactionRequest.cartId = @"{ADD_YOUR_CARTID}";
     
     //amount and currency
     NSDecimalNumber * amt = [[NSDecimalNumber alloc] initWithString:(@"75")];
@@ -115,8 +113,6 @@ NSString * const TAG = @"ViewController";
     //shipping required
     transactionRequest.isShippingRequired = true;
     
-    
-    // Obtenemos el valor para saber si se completo o no la transaccion
     completionBlock(transactionRequest);
 }
 
